@@ -1,0 +1,13 @@
+// Local emulator only. Production bindings remain managed in the Pages dashboard.
+{
+  "name": "wedding-gifts-local",
+  "pages_build_output_dir": ".",
+  "compatibility_date": "2026-10-17",
+  "d1_databases": [
+    {
+      "binding": "GIFTS_DB",
+      "database_name": "wedding-gifts-local",
+      "database_id": "00000000-0000-0000-0000-000000000001"
+    }
+  ]
+}
