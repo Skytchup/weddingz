@@ -1,0 +1,6 @@
+/server/*
+  X-Robots-Tag: noindex, nofollow
+/migrations/*
+  X-Robots-Tag: noindex, nofollow
+/tests/*
+  X-Robots-Tag: noindex, nofollow

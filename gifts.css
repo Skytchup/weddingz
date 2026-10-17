@@ -1,0 +1,111 @@
+/* Honeymoon gifts: a collection of memories, with payment details one step away. */
+body[data-page="gifts"] .content{max-width:1220px;padding:125px 32px 90px}
+body[data-page="gifts"] .page-hero{padding:115px 24px 38px}
+body[data-page="gifts"] .page-hero h1{font-size:clamp(3.4rem,6vw,4.8rem)}
+.honeymoon-intro{max-width:720px;margin:0 auto 42px;text-align:center;position:relative}
+.honeymoon-intro .eyebrow{font-size:.69rem;letter-spacing:.16em;margin-bottom:16px}
+.honeymoon-intro h1{font-size:clamp(2.3rem,4vw,3rem);color:var(--red);margin-bottom:22px}
+.honeymoon-intro>p:not(.eyebrow){max-width:660px;margin:0 auto 15px}
+.honeymoon-intro .gift-invitation{color:var(--muted)}
+.honeymoon-intro .gift-optional{font-size:.86rem;font-style:italic;color:var(--red)}
+.gift-flourish{display:inline-block;color:var(--gold);font-size:30px;line-height:1;margin-top:12px}
+.gift-collection-heading{display:flex;align-items:center;justify-content:space-between;padding:20px 0 25px;border-top:1px solid #decbbf}
+.gift-collection-heading h2{font-size:clamp(1.7rem,3vw,2.3rem);margin:0 0 8px;color:var(--red)}
+.gift-collection-heading p{margin:0;color:var(--muted);font-size:.9rem}
+.gift-collection-heading>span{font-family:Georgia,serif;font-size:2.2rem;color:#bb925677;letter-spacing:.1em;margin-left:20px}
+.gift-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+.gift-card{position:relative;background:#fffaf2;border:1px solid #e5d4c4;border-radius:9px;overflow:hidden;transition:box-shadow .25s,transform .25s}
+.gift-card:has(button:not(:disabled)):hover{transform:translateY(-5px);box-shadow:0 15px 35px #5d352010}
+.gift-card-button{display:block;align-content:start;width:100%;height:100%;border:0;background:transparent;color:inherit;padding:0;text-align:left;font:inherit;cursor:pointer}
+.gift-card-button:disabled{cursor:default;opacity:1;color:inherit}
+.gift-card-button:focus-visible{outline:3px solid var(--red);outline-offset:-4px}
+.gift-card-photo{aspect-ratio:1.5;position:relative;overflow:hidden;background:linear-gradient(135deg,#e4d5c2,#b5b9a4)}
+.gift-card-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gift-card-button:not(:disabled):hover .gift-card-photo img{transform:scale(1.04)}
+.gift-card-photo::after{content:'';position:absolute;inset:50% 0 0;background:linear-gradient(transparent,#30271c33);pointer-events:none}
+.gift-price{position:absolute;z-index:1;top:14px;right:14px;padding:5px 12px;background:#fffaf2f2;border-radius:100px;font-size:.84rem;font-weight:600;box-shadow:0 2px 12px #28201a10}
+.gift-card-copy{padding:22px 22px 20px}
+.gift-card-tag{display:flex;align-items:center;justify-content:space-between;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:10px}
+.gift-card-tag span{font-size:1.1rem;font-weight:400}
+.gift-card h2{font-size:1.65rem;line-height:1.2;margin:0 0 12px;color:var(--red)}
+.gift-card p{font-size:.87rem;line-height:1.65;color:var(--muted);margin:0 0 20px;min-height:4.95em}
+.gift-progress{height:5px;border-radius:5px;overflow:hidden;background:#e9decf;margin:18px 0 8px}
+.gift-progress>span{height:100%;display:block;background:var(--red);border-radius:inherit;transition:width .6s}
+.gift-progress-label{display:flex;justify-content:space-between;gap:10px;font-size:.67rem;color:var(--muted);line-height:1.5}
+.gift-progress-label>span:last-child{text-align:right}
+.gift-open-total{font-size:.76rem;color:var(--red);border-top:1px solid #e9decf;padding-top:13px}
+.gift-card-open{grid-column:1 / -1}
+.gift-card-open .gift-card-button{display:grid;grid-template-columns:1fr 2fr;align-items:center}
+.gift-card-open .gift-card-photo{height:100%;min-height:245px;aspect-ratio:auto}
+.gift-card-open .gift-card-copy{padding:28px 35px}
+.gift-card-open p{min-height:0}
+.gift-progress-note{font-size:.74rem;text-align:center;color:var(--muted);margin:25px 0 0}
+.gift-status{padding:15px 18px;margin:0 0 22px;background:#f0e6d8;border:1px solid #dfccb7;border-radius:6px;color:var(--muted);font-size:.85rem}
+.gift-status[hidden]{display:none}
+.gift-text-button{font:inherit;color:var(--red);border:0;background:none;text-decoration:underline;cursor:pointer;padding:0 8px}
+.gift-progress-placeholder{display:block;height:23px;background:#ede4d6;border-radius:4px;margin-top:18px;max-width:75%}
+.is-funded{border-color:var(--gold);box-shadow:0 0 0 2px #bb925629,0 5px 25px #bb925615}
+.is-funded::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,#fff8e1a8 45%,transparent 70%);transform:translateX(-140%);animation:gift-shimmer 7s ease-in-out infinite;pointer-events:none}
+.is-funded .gift-progress>span{background:var(--gold)}
+.gift-funded-badge{position:absolute;bottom:15px;left:15px;z-index:1;background:#fff4dcef;color:#684b21;padding:6px 13px;border:1px solid #dac092;border-radius:100px;font-size:.76rem}
+.gift-card .gift-funded-thanks{min-height:0;font-style:italic;color:#785a2b;margin:12px 0 0;font-size:.75rem}
+@keyframes gift-shimmer{0%,65%{transform:translateX(-140%)}90%,100%{transform:translateX(140%)}}
+.gift-dialog-open{overflow:hidden}
+.gift-dialog{width:min(1060px,calc(100% - 48px));max-width:none;max-height:calc(100svh - 48px);padding:0;border:1px solid #e6d6c2;border-radius:12px;background:var(--cream);color:var(--ink);overflow:auto;box-shadow:0 35px 120px #1f160d55;overscroll-behavior:contain}
+.gift-dialog::backdrop{background:#211a16a8;backdrop-filter:blur(5px)}
+.gift-dialog[open]{animation:gift-dialog-enter .3s ease both}
+@keyframes gift-dialog-enter{from{opacity:0}to{opacity:1}}
+::view-transition-group(gift-photo){animation-duration:540ms;animation-timing-function:cubic-bezier(.22,1,.36,1);overflow:hidden}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-old(gift-photo),::view-transition-new(gift-photo){height:100%;object-fit:cover}
+.gift-dialog-top{display:grid;grid-template-columns:43% 57%;min-height:480px}
+.gift-dialog-image{position:relative;min-height:100%;transform-origin:top left;z-index:1;background:#d9c6b0}
+.gift-dialog-image>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gift-dialog-image::after{content:'';position:absolute;inset:60% 0 0;background:linear-gradient(transparent,#271d1590)}
+.gift-dialog-image-label{position:absolute;bottom:28px;left:28px;color:#fff8ee;font-family:'Playfair Display',Georgia,serif;font-size:2rem;z-index:1}
+.gift-dialog-details{padding:45px 38px 32px}
+.gift-dialog-details>.eyebrow{padding-right:25px;margin-bottom:16px}
+.gift-dialog h2{font-size:2.5rem;color:var(--red);margin:0 0 20px}
+.gift-dialog-details>p{font-size:.9rem;color:var(--muted)}
+.gift-dialog h3{font-size:1.5rem;color:var(--red)}
+.gift-payment-area{border-top:1px solid #dfcdbb;margin-top:25px;padding-top:25px}
+.gift-payment-area>p{font-size:.85rem;color:var(--muted)}
+.gift-dialog .gift-methods{margin:18px 0}
+.gift-dialog .gift-method{border-radius:5px;background:#fffaf2}
+.gift-dialog .gift-method summary{font-size:1.1rem;padding:14px 16px}
+.gift-dialog .gift-method-body{padding:16px;font-size:.82rem}
+.gift-dialog .bank-details{grid-template-columns:1fr;gap:12px}
+.gift-dialog .bank-details dt{font-size:.7rem}
+.gift-dialog .paynow-qr{max-width:230px}
+.gift-dialog .gift-transfer-note{font-size:.72rem;line-height:1.6;margin-bottom:10px}
+.gift-close{position:absolute;top:13px;right:13px;z-index:4;display:grid;place-items:center;width:34px;height:34px;border:1px solid #d6c4b1;border-radius:50%;background:#fffaf2ef;font:25px/1 sans-serif;color:var(--red);cursor:pointer}
+.gift-close:disabled{opacity:.5;cursor:wait}
+.gift-record{margin-top:20px;padding:0;background:transparent}
+.gift-record-toggle{display:flex;width:100%;align-items:center;justify-content:space-between;gap:18px;padding:14px 16px;border:1px solid var(--red);border-radius:5px;background:var(--red);text-align:left;color:#fffaf2;font:1.1rem/1.7 'Playfair Display',Georgia,serif;cursor:pointer}.gift-record-toggle:hover{background:#742b34}.gift-record-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.gift-record-toggle:disabled{opacity:.5;cursor:default}
+.gift-contribution-form{padding-top:28px}
+.gift-contribution-form>p{font-size:.86rem;color:var(--muted)}
+.gift-coverage{display:flex;flex-wrap:wrap;gap:12px;border:0;padding:0;margin:18px 0 22px}
+.gift-coverage>label{padding:10px 15px;background:#fffaf2;border:1px solid #d7c3b0;border-radius:5px;font-size:.85rem;cursor:pointer}
+.gift-coverage>label:has(input:checked){border-color:var(--red);background:#8d36400a}
+.gift-contribution-form input[type=radio],.gift-contribution-form input[type=checkbox]{accent-color:var(--red);width:17px;height:17px;vertical-align:middle;flex-shrink:0}
+.gift-form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.gift-contribution-form label{font-size:.84rem;font-weight:500}
+.gift-contribution-form label>span{font-size:.72rem;font-weight:400;color:var(--muted)}
+.gift-contribution-form input:not([type=radio]):not([type=checkbox]),.gift-contribution-form textarea{display:block;box-sizing:border-box;width:100%;margin:7px 0 0;border:1px solid #d8c5b2;border-radius:5px;background:#fffaf2;color:var(--ink);padding:12px;font:inherit;font-size:1rem;line-height:1.5}
+.gift-contribution-form input[readonly]{background:#ede3d5!important;color:var(--muted)!important}
+.gift-contribution-form textarea{resize:vertical;min-height:95px}
+.gift-contribution-form .gift-field-hint{font-size:.73rem;margin:10px 0 20px}
+.gift-transfer-confirm{display:flex;gap:9px;align-items:center;margin:22px 0}
+.gift-submit{padding:13px 23px;border:1px solid var(--red);border-radius:5px;background:var(--red);color:#fffaf2;font:500 .9rem/1.5 'DM Sans',sans-serif;cursor:pointer}
+.gift-submit:disabled{opacity:.65;cursor:wait}
+.gift-form-error{color:var(--red)!important;background:#8d36400c;padding:14px;border-radius:5px}
+.gift-success{text-align:center;padding:16px;color:var(--red)}
+.gift-success>span{display:block;font-size:2rem;color:var(--gold)}
+.gift-success h3{margin:10px 0}
+.gift-success p{font-size:.9rem;max-width:600px;margin:0 auto;color:var(--muted)}
+.gift-honeypot,.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.gift-checking{font-size:.8rem!important;color:var(--muted)}
+@media(max-width:950px){.gift-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gift-dialog-details{padding:40px 25px 25px}.gift-dialog-top{grid-template-columns:40% 60%}.gift-dialog h2{font-size:2rem}}
+@media(max-width:620px){body[data-page="gifts"] .content{padding:100px 20px 65px}.honeymoon-intro{margin-bottom:28px}.honeymoon-intro>p:not(.eyebrow){font-size:.9rem}.gift-grid{grid-template-columns:1fr;gap:20px}.gift-card-photo{aspect-ratio:1.65}.gift-card h2{font-size:1.8rem}.gift-card p{min-height:0}.gift-card-copy{padding:22px}.gift-card-open .gift-card-button{display:block}.gift-card-open .gift-card-photo{height:auto;min-height:0;aspect-ratio:1.65}.gift-card-open .gift-card-copy{padding:22px}.gift-collection-heading>span{font-size:1.8rem}.gift-dialog{width:calc(100% - 24px);max-height:calc(100svh - 24px);border-radius:9px}.gift-dialog-top{display:block;min-height:0}.gift-dialog-image{min-height:0;height:220px}.gift-dialog-image-label{bottom:20px;left:23px;font-size:1.7rem}.gift-dialog-details{padding:28px 22px 24px}.gift-close{position:sticky;float:right;top:10px;right:10px;margin:10px 10px -44px 0}.gift-dialog-details>.eyebrow{padding-right:0}.gift-record{padding:0}.gift-form-row{grid-template-columns:1fr;gap:16px}.gift-submit{width:100%}.gift-coverage{gap:8px}.gift-coverage>label{font-size:.8rem}.gift-progress-label{font-size:.72rem}}
+@media(prefers-reduced-motion:reduce){.gift-card,.gift-card-photo img,.gift-progress>span{transition:none}.is-funded::after,.gift-dialog[open]{animation:none}.is-funded::after{display:none}}
