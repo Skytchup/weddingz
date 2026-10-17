@@ -10,9 +10,9 @@ window.WeddingGifts = (() => {
     together: 'https://pub-2e3024c43ee34ef781ed4df20ecad1c8.r2.dev/japan.jpg'
   };
   const gifts = [
+    { id: 'flights', target: 120000, image: photos.flights },
     { id: 'hotel', target: 200000, image: photos.hotel },
     { id: 'rail', target: 80000, image: photos.rail },
-    { id: 'flights', target: 120000, image: photos.flights },
     { id: 'restaurants', target: 20000, image: photos.restaurants },
     { id: 'onsen', target: 10000, image: photos.onsen },
     { id: 'pokemon', target: null, image: photos.pokemon },
@@ -23,7 +23,7 @@ window.WeddingGifts = (() => {
       eyebrow: 'A little piece of our adventure', title: 'Our honeymoon dream',
       intro: "For anyone who would like to contribute, we're saving for our honeymoon in Japan. We hope to discover its beautiful landscapes, food and culture together.",
       invitation: 'These are a few moments we’re dreaming of. If you wish, you can help make one of them happen — in full or with a little contribution.',
-      optional: 'Your presence is already the most beautiful gift. Everything here is entirely optional.',
+      optional: 'Your presence is already the most beautiful gift.',
       browse: 'Little moments, lasting memories', browseSub: 'Choose a moment to discover more.',
       titles: ['A place to slow down', 'Across Japan by train', 'The start of our adventure', 'A taste of Japan', 'A moment of calm', 'Just one more Pokémon…', 'A little something for our journey'],
       tags: ['Hotel', 'JR Pass', 'Flights', 'Restaurants', 'Onsen', 'Pokémon', 'A gift of your choice'],
@@ -50,7 +50,7 @@ window.WeddingGifts = (() => {
       eyebrow: 'Un petit bout de notre aventure', title: 'Notre rêve de voyage',
       intro: 'Pour ceux qui souhaitent participer, nous préparons notre voyage de noces au Japon. Nous espérons y découvrir ensemble de magnifiques paysages, sa gastronomie et sa culture.',
       invitation: 'Voici quelques moments dont nous rêvons. Si le cœur vous en dit, vous pouvez nous aider à en réaliser un, en entier ou avec une petite participation.',
-      optional: 'Votre présence est déjà le plus beau cadeau. Toutes les participations sont entièrement facultatives.',
+      optional: 'Votre présence est déjà le plus beau cadeau.',
       browse: 'De petits moments, de grands souvenirs', browseSub: 'Choisissez un moment pour en savoir plus.',
       titles: ['Une escale pour nous deux', 'Le Japon au fil des rails', 'Le début de notre aventure', 'Les saveurs du Japon', 'Une parenthèse de douceur', 'Encore un petit Pokémon…', 'Un petit coup de pouce au voyage'],
       tags: ['Hôtel', 'JR Pass', 'Vols', 'Restaurants', 'Onsen', 'Pokémon', 'Un cadeau à votre mesure'],
@@ -77,7 +77,7 @@ window.WeddingGifts = (() => {
       eyebrow: 'आमच्या प्रवासातील एक सुंदर क्षण', title: 'आमचे प्रवासाचे स्वप्न',
       intro: 'भेट देऊ इच्छिणाऱ्यांसाठी, आम्ही जपानमधील मधुचंद्रासाठी बचत करत आहोत. तिथले सुंदर निसर्ग, खाद्यसंस्कृती आणि परंपरा एकत्र अनुभवण्याची आमची इच्छा आहे.',
       invitation: 'आम्ही पाहत असलेली ही काही छोटी स्वप्ने. तुमची इच्छा असेल तर एखाद्या अनुभवासाठी पूर्ण किंवा थोडे योगदान देऊ शकता.',
-      optional: 'तुमची उपस्थिती हीच आमच्यासाठी सर्वात सुंदर भेट. योगदान देणे पूर्णपणे ऐच्छिक आहे.',
+      optional: 'तुमची उपस्थिती हीच आमच्यासाठी सर्वात सुंदर भेट.',
       browse: 'छोटे क्षण, कायमच्या आठवणी', browseSub: 'अधिक जाणून घेण्यासाठी एखादा अनुभव निवडा.',
       titles: ['निवांत मुक्काम', 'रेल्वेने जपानची सफर', 'आमच्या प्रवासाची सुरुवात', 'जपानच्या चवी', 'निवांतपणाचा एक क्षण', 'आणखी एक पोकेमॉन…', 'आमच्या प्रवासासाठी तुमची भेट'],
       tags: ['हॉटेल', 'JR Pass', 'विमानप्रवास', 'रेस्टॉरंट', 'ओन्सेन', 'पोकेमॉन', 'तुमच्या इच्छेनुसार भेट'],
@@ -101,13 +101,19 @@ window.WeddingGifts = (() => {
       total: 'प्रेमाने मिळालेल्या भेटी', saved: 'भेट नोंदवली', connection: 'नवीन योगदान तपासत आहोत…'
     }
   };
+  // Keep translated labels aligned with the gallery's flights-first order.
+  for (const language of Object.values(copy)) {
+    for (const field of ['titles', 'tags', 'descriptions']) {
+      language[field] = [2, 0, 1, 3, 4, 5, 6].map(index => language[field][index]);
+    }
+  }
   let cleanup = () => {};
   const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 
   function render(language) {
     cleanup();
     const c = copy[language] || copy.en;
-    return `<section class="honeymoon-intro"><p class="eyebrow">${c.eyebrow}</p><h2>${c.title}</h2><p>${c.intro}</p><p class="gift-invitation">${c.invitation}</p><p class="gift-optional">${c.optional}</p><span class="gift-flourish" aria-hidden="true">✧</span></section><section class="gift-collection" aria-labelledby="gift-collection-title"><div class="gift-collection-heading"><div><h2 id="gift-collection-title" tabindex="-1">${c.browse}</h2><p>${c.browseSub}</p></div><span aria-hidden="true">日本</span></div><div id="gift-status" class="gift-status" role="status">${c.loading}</div><div class="gift-grid" id="gift-grid"></div><p class="gift-progress-note">${c.selfReported}</p></section>`;
+    return `<header class="honeymoon-intro"><h1 id="gift-collection-title" tabindex="-1">${c.title}</h1><p class="gift-optional">${c.optional}</p></header><section class="gift-collection" aria-labelledby="gift-collection-title"><div id="gift-status" class="gift-status" role="status">${c.loading}</div><div class="gift-grid" id="gift-grid"></div><p class="gift-progress-note">${c.selfReported}</p></section>`;
   }
 
   function mount(language, translate, paymentMarkup) {
@@ -128,7 +134,7 @@ window.WeddingGifts = (() => {
       ? `<div class="gift-progress" role="progressbar" aria-label="${escape(c.tags[gifts.indexOf(gift)])}" aria-valuemin="0" aria-valuemax="${gift.target / 100}" aria-valuenow="${Math.min(total(gift), gift.target) / 100}" aria-valuetext="${escape(money(total(gift)) + ' / ' + money(gift.target))}"><span style="width:${Math.min(100, total(gift) / gift.target * 100)}%"></span></div><div class="gift-progress-label"><span>${money(total(gift))} ${c.raised}</span><span>${full(gift) ? '✧' : money(remaining(gift)) + ' ' + c.remaining}</span></div>`
       : `<div class="gift-open-total">${total(gift) ? money(total(gift)) + ' · ' + c.total : c.any}</div>`;
     function draw() {
-      root.innerHTML = gifts.map((gift, i) => `<article class="gift-card${full(gift) ? ' is-funded' : ''}${gift.id === 'together' ? ' gift-card-open' : ''}"><button class="gift-card-button" type="button" data-gift="${gift.id}" ${!available || full(gift) ? 'disabled' : ''} aria-label="${escape(c.tags[i] + ' — ' + (full(gift) ? c.covered : c.open))}"><div class="gift-card-photo"><img src="${gift.image}" alt="${escape(c.tags[i])}" loading="lazy"><span class="gift-price">${price(gift)}</span>${full(gift) ? `<span class="gift-funded-badge">✧ ${c.covered}</span>` : ''}</div><div class="gift-card-copy"><div class="gift-card-tag">${c.tags[i]} <span aria-hidden="true">${full(gift) ? '✧' : '↗'}</span></div><h3>${c.titles[i]}</h3><p>${c.descriptions[i]}</p>${available ? progress(gift) : '<span class="gift-progress-placeholder" aria-hidden="true"></span>'}${full(gift) ? `<p class="gift-funded-thanks">${c.coveredThanks}</p>` : ''}</div></button></article>`).join('');
+      root.innerHTML = gifts.map((gift, i) => `<article class="gift-card${full(gift) ? ' is-funded' : ''}${gift.id === 'together' ? ' gift-card-open' : ''}"><button class="gift-card-button" type="button" data-gift="${gift.id}" ${!available || full(gift) ? 'disabled' : ''} aria-label="${escape(c.tags[i] + ' — ' + (full(gift) ? c.covered : c.open))}"><div class="gift-card-photo"><img src="${gift.image}" alt="${escape(c.tags[i])}" loading="lazy"><span class="gift-price">${price(gift)}</span>${full(gift) ? `<span class="gift-funded-badge">✧ ${c.covered}</span>` : ''}</div><div class="gift-card-copy"><div class="gift-card-tag">${c.tags[i]} <span aria-hidden="true">${full(gift) ? '✧' : '↗'}</span></div><h2>${c.titles[i]}</h2><p>${c.descriptions[i]}</p>${available ? progress(gift) : '<span class="gift-progress-placeholder" aria-hidden="true"></span>'}${full(gift) ? `<p class="gift-funded-thanks">${c.coveredThanks}</p>` : ''}</div></button></article>`).join('');
     }
     const dialog = document.createElement('dialog');
     dialog.className = 'gift-dialog';
@@ -197,7 +203,7 @@ window.WeddingGifts = (() => {
       draftId = crypto.randomUUID();
       pendingPayload = null;
       dialog.setAttribute('aria-labelledby', 'gift-dialog-title');
-      dialog.innerHTML = `<button class="gift-close" type="button" aria-label="${c.close}">×</button><div class="gift-dialog-top"><div class="gift-dialog-image"><img src="${gift.image}" alt="${escape(c.tags[i])}"><span class="gift-dialog-image-label">${c.tags[i]}</span></div><div class="gift-dialog-details"><p class="eyebrow">${c.tags[i]} · ${price(gift)}</p><h2 id="gift-dialog-title">${c.titles[i]}</h2><p>${c.descriptions[i]}</p><div class="gift-dialog-progress">${progress(gift)}</div><div class="gift-payment-area" hidden><h3>${c.methods}</h3><p>${c.methodsBody}</p>${paymentMarkup()}<p class="gift-transfer-note">${c.reference}</p><p class="gift-transfer-note">${translate('giftNote')}</p></div><p class="gift-checking" role="status">${c.connection}</p></div></div><div class="gift-record"><button class="gift-record-toggle" type="button" aria-expanded="false" aria-controls="gift-contribution-form">${c.record} <span aria-hidden="true">＋</span></button><form id="gift-contribution-form" class="gift-contribution-form" hidden><p>${c.recordIntro}</p>${gift.target !== null ? `<fieldset class="gift-coverage"><legend class="visually-hidden">${c.amount}</legend><label><input type="radio" name="coverage" value="partial" checked> ${c.part}</label><label><input type="radio" name="coverage" value="full"> ${c.full}</label></fieldset>` : ''}<div class="gift-form-row"><label>${c.amount}<input type="number" name="amount" min="0.01" step="0.01" inputmode="decimal" required ${gift.target !== null ? 'max="' + remaining(gift) / 100 + '"' : ''}></label><label>${c.name} <span>(${c.nameHint})</span><input type="text" name="name" maxlength="100" autocomplete="name"></label></div><p class="gift-field-hint">${c.amountHint}</p><label>${c.message} <span>(${c.nameHint})</span><textarea name="message" rows="3" maxlength="1000"></textarea></label><p class="gift-field-hint">${c.private}</p><label class="gift-transfer-confirm"><input type="checkbox" name="transferred" required> ${c.confirm}</label><div class="gift-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><p class="gift-form-error" role="alert" hidden></p><button class="gift-submit" type="submit">${c.save}</button></form></div>`;
+      dialog.innerHTML = `<button class="gift-close" type="button" aria-label="${c.close}">×</button><div class="gift-dialog-top"><div class="gift-dialog-image"><img src="${gift.image}" alt="${escape(c.tags[i])}"><span class="gift-dialog-image-label">${c.tags[i]}</span></div><div class="gift-dialog-details"><p class="eyebrow">${c.tags[i]} · ${price(gift)}</p><h2 id="gift-dialog-title">${c.titles[i]}</h2><p>${c.descriptions[i]}</p><div class="gift-dialog-progress">${progress(gift)}</div><div class="gift-payment-area" hidden><h3>${c.methods}</h3>${paymentMarkup()}<p class="gift-transfer-note">${translate('giftNote')}</p></div><p class="gift-checking" role="status">${c.connection}</p><div class="gift-record"><button class="gift-record-toggle" type="button" aria-expanded="false" aria-controls="gift-contribution-form">${c.record} <span aria-hidden="true">＋</span></button><form id="gift-contribution-form" class="gift-contribution-form" hidden><p>${c.recordIntro}</p>${gift.target !== null ? `<fieldset class="gift-coverage"><legend class="visually-hidden">${c.amount}</legend><label><input type="radio" name="coverage" value="partial" checked> ${c.part}</label><label><input type="radio" name="coverage" value="full"> ${c.full}</label></fieldset>` : ''}<div class="gift-form-row"><label>${c.amount}<input type="number" name="amount" min="0.01" step="0.01" inputmode="decimal" required ${gift.target !== null ? 'max="' + remaining(gift) / 100 + '"' : ''}></label><label>${c.name} <span>(${c.nameHint})</span><input type="text" name="name" maxlength="100" autocomplete="name"></label></div><p class="gift-field-hint">${c.amountHint}</p><label>${c.message} <span>(${c.nameHint})</span><textarea name="message" rows="3" maxlength="1000"></textarea></label><p class="gift-field-hint">${c.private}</p><label class="gift-transfer-confirm"><input type="checkbox" name="transferred" required> ${c.confirm}</label><div class="gift-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><p class="gift-form-error" role="alert" hidden></p><button class="gift-submit" type="submit">${c.save}</button></form></div></div></div>`;
       const image = dialog.querySelector('.gift-dialog-image');
       const sourceImage = button.querySelector('img');
       const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
