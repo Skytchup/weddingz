@@ -2,7 +2,7 @@
 
 The pictures illustrate honeymoon experiences; they do not represent bookings.
 
-- Hotel: [Wiryan Tirtarahardja — Kikuya Ryokan, Izu](https://unsplash.com/photos/a-room-with-a-red-chair-and-a-window-Eq-5GtYJ92Y), Unsplash License.
+- Hotel: [Kateigaho — THE HIRAMATSU HOTELS & RESORTS Atami, garden-view room](https://www.kateigaho.com/travel/local/168380/), selected by the couple as illustrative imagery.
 - JR Pass: [Rikku Sama — Shinkansen, Kyushu](https://unsplash.com/photos/white-and-black-train-on-rail-tIA68glTme0), Unsplash License.
 - Onsen: [Roméo A. — private onsen, Kinosaki](https://unsplash.com/photos/a-large-pool-of-water-next-to-a-tall-building-8X3IMf4W8Ew), Unsplash License.
 - Flights: Unsplash image `photo-1436491865332-7a61a109cc05`.

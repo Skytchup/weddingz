@@ -1,7 +1,7 @@
 /* The gallery is static; only aggregate contributions come from the shared API. */
 window.WeddingGifts = (() => {
   const photos = {
-    hotel: 'https://images.unsplash.com/photo-1722229808540-054073c5665b?auto=format&fit=crop&w=1100&q=85',
+    hotel: 'https://images.www.kateigaho.com/media/article/168380/images/editor/042c4333086193d622ca5d52686d67ee3547a134.jpg?w=670',
     rail: 'https://images.unsplash.com/photo-1618153231956-df23dcb21c07?auto=format&fit=crop&w=1100&q=85',
     flights: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1100&q=85',
     restaurants: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1100&q=85',
