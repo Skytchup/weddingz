@@ -25,16 +25,16 @@ window.WeddingGifts = (() => {
       invitation: 'These are a few moments we’re dreaming of. If you wish, you can help make one of them happen — in full or with a little contribution.',
       optional: 'Your presence is already the most beautiful gift.',
       browse: 'Little moments, lasting memories', browseSub: 'Choose a moment to discover more.',
-      titles: ['A place to slow down', 'Across Japan by train', 'The start of our adventure', 'A taste of Japan', 'A moment of calm', 'Just one more Pokémon…', 'A little something for our journey'],
-      tags: ['Hotel', 'JR Pass', 'Flights', 'Restaurants', 'Onsen', 'Pokémon', 'A gift of your choice'],
-      descriptions: ['Somewhere to wake up slowly, discover a new neighbourhood and feel at home, far from home.', 'From city lights to mountain views, a window seat for all the beautiful places in between.', 'Two seats, a long flight, and the excitement of discovering somewhere new together.', 'A tiny ramen shop, a sushi counter, a meal we’ll still be talking about years later.', 'Warm water, quiet surroundings, and a little pause to take it all in.', 'A few very essential souvenirs. We can’t promise we’ll know when to stop.', 'For an unexpected discovery, a small detour, or whatever makes the journey a little more special.'],
+      titles: ['A place to slow down', 'Across Japan by train', 'The start of our adventure', 'An unforgettable sushi experience', 'A moment of calm', 'Just one more Pokémon…', 'A little something for our journey'],
+      tags: ['Hotel', 'JR Pass', 'Flights', 'Sushi experience', 'Onsen', 'Pokémon', 'A gift of your choice'],
+      descriptions: ['Somewhere to wake up slowly, discover a new neighbourhood and feel at home, far from home.', 'From city lights to mountain views, a window seat for all the beautiful places in between.', 'Two seats, a long flight, and the excitement of discovering somewhere new together.', 'An unforgettable sushi experience in the heart of Japan, savouring a chef’s craft at an exceptional restaurant.', 'Warm water, quiet surroundings, and a little pause to take it all in.', 'A few very essential souvenirs. We can’t promise we’ll know when to stop.', 'For an unexpected discovery, a small detour, or whatever makes the journey a little more special.'],
       any: 'Any amount', infinite: '∞ · no limit', covered: 'Fully gifted', coveredThanks: 'Made possible with love',
       raised: 'contributed', remaining: 'still to dream', open: 'Discover this moment',
       methods: 'Help this memory happen', methodsBody: 'If you’d like to take part, use whichever option suits you. A little contribution means just as much.',
       reference: 'If possible, include the item name in your transfer reference.',
       record: 'Already contributed? Add a message', recordIntro: 'After making your transfer, tell us about your gift and leave a little note.',
-      part: 'A little contribution', full: 'Cover the remaining amount', amount: 'Your contribution (€)',
-      amountHint: 'For PayNow, enter the approximate equivalent in euros so the progress stays consistent.',
+      part: 'A little contribution', full: 'Cover the remaining amount', amount: 'Your contribution',
+      amountHint: 'Enter the amount transferred in the selected currency. Currency conversions are approximate; your bank’s rate may differ.',
       name: 'Your name', nameHint: 'Optional', message: 'A little note for us',
       private: 'Your name and message stay private, just for us. Only the contribution total is shared.',
       confirm: 'I have already made this transfer.', save: 'Send our gift & message', saving: 'Saving…',
@@ -52,16 +52,16 @@ window.WeddingGifts = (() => {
       invitation: 'Voici quelques moments dont nous rêvons. Si le cœur vous en dit, vous pouvez nous aider à en réaliser un, en entier ou avec une petite participation.',
       optional: 'Votre présence est déjà le plus beau cadeau.',
       browse: 'De petits moments, de grands souvenirs', browseSub: 'Choisissez un moment pour en savoir plus.',
-      titles: ['Une escale pour nous deux', 'Le Japon au fil des rails', 'Le début de notre aventure', 'Les saveurs du Japon', 'Une parenthèse de douceur', 'Encore un petit Pokémon…', 'Un petit coup de pouce au voyage'],
-      tags: ['Hôtel', 'JR Pass', 'Vols', 'Restaurants', 'Onsen', 'Pokémon', 'Un cadeau à votre mesure'],
-      descriptions: ['Se réveiller doucement, découvrir un nouveau quartier et se sentir chez soi, loin de chez nous.', 'Des lumières des villes aux paysages de montagne, une place côté fenêtre pour tout découvrir.', 'Deux places, un long vol et le bonheur de partir découvrir un nouveau pays ensemble.', 'Une petite échoppe de ramen, un comptoir à sushis, un repas dont on reparlera longtemps.', 'Une eau chaude, un cadre paisible et le temps de savourer l’instant.', 'Quelques souvenirs absolument indispensables. Promis… enfin, on essaiera de rester raisonnables.', 'Pour une découverte imprévue, un petit détour ou une belle surprise en chemin.'],
+      titles: ['Une escale pour nous deux', 'Le Japon au fil des rails', 'Le début de notre aventure', 'Une expérience sushi inoubliable', 'Une parenthèse de douceur', 'Encore un petit Pokémon…', 'Un petit coup de pouce au voyage'],
+      tags: ['Hôtel', 'JR Pass', 'Vols', 'Expérience sushi', 'Onsen', 'Pokémon', 'Un cadeau à votre mesure'],
+      descriptions: ['Se réveiller doucement, découvrir un nouveau quartier et se sentir chez soi, loin de chez nous.', 'Des lumières des villes aux paysages de montagne, une place côté fenêtre pour tout découvrir.', 'Deux places, un long vol et le bonheur de partir découvrir un nouveau pays ensemble.', 'Une expérience sushi inoubliable au cœur du Japon, pour savourer le savoir-faire d’un chef dans un restaurant d’exception.', 'Une eau chaude, un cadre paisible et le temps de savourer l’instant.', 'Quelques souvenirs absolument indispensables. Promis… enfin, on essaiera de rester raisonnables.', 'Pour une découverte imprévue, un petit détour ou une belle surprise en chemin.'],
       any: 'Montant libre', infinite: '∞ · sans limite', covered: 'Entièrement offert', coveredThanks: 'Un rêve réalisé grâce à vous',
       raised: 'offerts', remaining: 'restants', open: 'Découvrir ce moment',
       methods: 'Offrir un peu de ce souvenir', methodsBody: 'Si vous souhaitez participer, choisissez l’option qui vous convient. Chaque petite attention compte tout autant.',
       reference: 'Si possible, indiquez le nom du cadeau dans le libellé du virement.',
       record: 'Vous avez participé ? Ajoutez un message', recordIntro: 'Après votre virement, indiquez votre participation et laissez-nous un petit mot.',
-      part: 'Une petite participation', full: 'Offrir le montant restant', amount: 'Votre participation (€)',
-      amountHint: 'Avec PayNow, indiquez l’équivalent approximatif en euros pour garder un suivi cohérent.',
+      part: 'Une petite participation', full: 'Offrir le montant restant', amount: 'Votre participation',
+      amountHint: 'Indiquez le montant transféré dans la devise sélectionnée. Les conversions sont approximatives ; le taux de votre banque peut varier.',
       name: 'Votre nom', nameHint: 'Facultatif', message: 'Un petit mot pour nous',
       private: 'Votre nom et votre message restent privés, pour nous deux. Seul le total des participations est partagé.',
       confirm: 'J’ai déjà effectué ce virement.', save: 'Envoyer notre cadeau et notre message', saving: 'Enregistrement…',
@@ -79,16 +79,16 @@ window.WeddingGifts = (() => {
       invitation: 'आम्ही पाहत असलेली ही काही छोटी स्वप्ने. तुमची इच्छा असेल तर एखाद्या अनुभवासाठी पूर्ण किंवा थोडे योगदान देऊ शकता.',
       optional: 'तुमची उपस्थिती हीच आमच्यासाठी सर्वात सुंदर भेट.',
       browse: 'छोटे क्षण, कायमच्या आठवणी', browseSub: 'अधिक जाणून घेण्यासाठी एखादा अनुभव निवडा.',
-      titles: ['निवांत मुक्काम', 'रेल्वेने जपानची सफर', 'आमच्या प्रवासाची सुरुवात', 'जपानच्या चवी', 'निवांतपणाचा एक क्षण', 'आणखी एक पोकेमॉन…', 'आमच्या प्रवासासाठी तुमची भेट'],
-      tags: ['हॉटेल', 'JR Pass', 'विमानप्रवास', 'रेस्टॉरंट', 'ओन्सेन', 'पोकेमॉन', 'तुमच्या इच्छेनुसार भेट'],
-      descriptions: ['नव्या परिसरात फिरणे आणि घरापासून दूर असूनही घरासारखे वाटणारा मुक्काम.', 'शहरांच्या रोषणाईपासून डोंगरांच्या दृश्यांपर्यंत, खिडकीतून दिसणारा सुंदर जपान.', 'दोन जागा, एक लांब विमानप्रवास आणि एकत्र नव्या देशात जाण्याचा आनंद.', 'रामेनचे छोटे दुकान, सुशी आणि कायम लक्षात राहील असे एखादे जेवण.', 'गरम पाणी, शांत परिसर आणि एकत्र निवांत वेळ.', 'काही अगदी आवश्यक आठवणींच्या वस्तू! किती घ्यायच्या हे मात्र सांगता येणार नाही.', 'एखादा अनपेक्षित शोध, छोटीशी भटकंती किंवा प्रवासातील सुंदर आश्चर्य.'],
+      titles: ['निवांत मुक्काम', 'रेल्वेने जपानची सफर', 'आमच्या प्रवासाची सुरुवात', 'एक अविस्मरणीय सुशी अनुभव', 'निवांतपणाचा एक क्षण', 'आणखी एक पोकेमॉन…', 'आमच्या प्रवासासाठी तुमची भेट'],
+      tags: ['हॉटेल', 'JR Pass', 'विमानप्रवास', 'सुशी अनुभव', 'ओन्सेन', 'पोकेमॉन', 'तुमच्या इच्छेनुसार भेट'],
+      descriptions: ['नव्या परिसरात फिरणे आणि घरापासून दूर असूनही घरासारखे वाटणारा मुक्काम.', 'शहरांच्या रोषणाईपासून डोंगरांच्या दृश्यांपर्यंत, खिडकीतून दिसणारा सुंदर जपान.', 'दोन जागा, एक लांब विमानप्रवास आणि एकत्र नव्या देशात जाण्याचा आनंद.', 'जपानच्या हृदयात, एका खास रेस्टॉरंटमध्ये कुशल शेफने तयार केलेल्या सुशीचा अविस्मरणीय अनुभव.', 'गरम पाणी, शांत परिसर आणि एकत्र निवांत वेळ.', 'काही अगदी आवश्यक आठवणींच्या वस्तू! किती घ्यायच्या हे मात्र सांगता येणार नाही.', 'एखादा अनपेक्षित शोध, छोटीशी भटकंती किंवा प्रवासातील सुंदर आश्चर्य.'],
       any: 'इच्छेनुसार रक्कम', infinite: '∞ · मर्यादा नाही', covered: 'पूर्ण योगदान मिळाले', coveredThanks: 'तुमच्या प्रेमाने साकारलेले स्वप्न',
       raised: 'योगदान', remaining: 'बाकी', open: 'हा अनुभव पाहा',
       methods: 'या आठवणीचा भाग व्हा', methodsBody: 'सहभागी व्हायचे असल्यास तुमच्या सोयीचा पर्याय निवडा. प्रत्येक छोटी भेटही आमच्यासाठी मोलाची आहे.',
       reference: 'शक्य असल्यास पैसे पाठवताना भेटीचे नाव नमूद करा.',
       record: 'योगदान दिले आहे? संदेश लिहा', recordIntro: 'पैसे पाठवल्यानंतर तुमच्या भेटीची माहिती आणि आमच्यासाठी एक छोटा संदेश लिहा.',
-      part: 'थोडे योगदान', full: 'उरलेली संपूर्ण रक्कम', amount: 'तुमचे योगदान (€)',
-      amountHint: 'PayNow वापरल्यास, प्रगती योग्य दिसण्यासाठी युरोमधील अंदाजे समतुल्य रक्कम लिहा.',
+      part: 'थोडे योगदान', full: 'उरलेली संपूर्ण रक्कम', amount: 'तुमचे योगदान',
+      amountHint: 'निवडलेल्या चलनात पाठवलेली रक्कम लिहा. चलन रूपांतरण अंदाजे आहे; तुमच्या बँकेचा दर वेगळा असू शकतो.',
       name: 'तुमचे नाव', nameHint: 'ऐच्छिक', message: 'आमच्यासाठी छोटा संदेश',
       private: 'तुमचे नाव आणि संदेश फक्त आम्हा दोघांनाच दिसतील. इतरांना केवळ एकूण योगदान दिसेल.',
       confirm: 'मी हे पैसे आधीच पाठवले आहेत.', save: 'भेट आणि संदेश नोंदवा', saving: 'नोंदवत आहोत…',
@@ -107,16 +107,48 @@ window.WeddingGifts = (() => {
       language[field] = [2, 0, 1, 3, 4, 5, 6].map(index => language[field][index]);
     }
   }
+  // Fixed estimates, rounded from ECB reference rates on 14 October 2026.
+  // Source: https://www.ecb.europa.eu/stats/exchange/eurofxref/shared/pdf/2026/10/20261014.pdf
+  // Shared API amounts remain integer euro cents.
+  const rates = { EUR: 1, SGD: 1.44, INR: 107 };
+  const defaults = { en: 'SGD', fr: 'EUR', mr: 'INR' };
+  const currencyCopy = {
+    en: { label: 'Currency', estimate: 'Fixed estimates: €1 ≈ S$1.44 ≈ ₹107. Your bank’s rate may differ.' },
+    fr: { label: 'Devise', estimate: 'Estimations fixes : 1 € ≈ 1,44 S$ ≈ 107 ₹. Le taux de votre banque peut varier.' },
+    mr: { label: 'चलन', estimate: 'निश्चित अंदाज: €1 ≈ S$1.44 ≈ ₹107. तुमच्या बँकेचा दर वेगळा असू शकतो.' }
+  };
+  let currency = 'EUR', previousLanguage = null;
+  function selectLanguage(language) {
+    if (previousLanguage !== language) currency = defaults[language] || 'EUR';
+    previousLanguage = language;
+  }
+  const displayMinor = (cents, code = currency) => Math.round(cents * rates[code]);
+  const inputAmount = (cents, code = currency) => (displayMinor(cents, code) / 100).toFixed(2);
+  const euroCents = (amount, code = currency) => Math.round(Number(amount) * 100 / rates[code]);
+  function contributionCents(amount, code, remainingCents = null) {
+    // Avoid a rounded display amount leaving a cent outstanding on a full gift.
+    if (remainingCents !== null && Number(amount) === Number(inputAmount(remainingCents, code))) return remainingCents;
+    return euroCents(amount, code);
+  }
+  function currencyControls(language) {
+    const text = currencyCopy[language] || currencyCopy.en;
+    return '<div class="gift-currency"><label>' + text.label + ' <select data-gift-currency>' +
+      Object.keys(rates).map(code => '<option value="' + code + '"' + (code === currency ? ' selected' : '') + '>' +
+        ({ EUR: 'EUR · €', SGD: 'SGD · S$', INR: 'INR · ₹' })[code] + '</option>').join('') +
+      '</select></label><p>' + text.estimate + '</p></div>';
+  }
   let cleanup = () => {};
   const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 
   function render(language) {
     cleanup();
+    selectLanguage(language);
     const c = copy[language] || copy.en;
-    return `<header class="honeymoon-intro"><h1 id="gift-collection-title" tabindex="-1">${c.title}</h1><p class="gift-optional">${c.optional}</p></header><section class="gift-collection" aria-labelledby="gift-collection-title"><div id="gift-status" class="gift-status" role="status">${c.loading}</div><div class="gift-grid" id="gift-grid"></div><p class="gift-progress-note">${c.selfReported}</p></section>`;
+    return `<header class="honeymoon-intro"><h1 id="gift-collection-title" tabindex="-1">${c.title}</h1><p class="gift-optional">${c.optional}</p></header><section class="gift-collection" aria-labelledby="gift-collection-title">${currencyControls(language)}<div id="gift-status" class="gift-status" role="status">${c.loading}</div><div class="gift-grid" id="gift-grid"></div><p class="gift-progress-note">${c.selfReported}</p></section>`;
   }
 
   function mount(language, translate, paymentMarkup) {
+    selectLanguage(language);
     const c = copy[language] || copy.en;
     const root = document.getElementById('gift-grid');
     const status = document.getElementById('gift-status');
@@ -125,13 +157,13 @@ window.WeddingGifts = (() => {
     const signal = controller.signal;
     let amounts = {}, available = false, active = null, opener = null, stopped = false;
     let draftId = null, submitting = false, pendingPayload = null, refreshPromise = null;
-    const money = cents => new Intl.NumberFormat({ en: 'en-IE', fr: 'fr-FR', mr: 'mr-IN' }[language], { style: 'currency', currency: 'EUR', maximumFractionDigits: cents % 100 ? 2 : 0 }).format(cents / 100);
+    const money = cents => new Intl.NumberFormat({ en: 'en-IE', fr: 'fr-FR', mr: 'mr-IN' }[language], { style: 'currency', currency, currencyDisplay: 'code', maximumFractionDigits: displayMinor(cents) % 100 ? 2 : 0 }).format(displayMinor(cents) / 100);
     const total = gift => amounts[gift.id] || 0;
     const full = gift => gift.target !== null && total(gift) >= gift.target;
     const remaining = gift => Math.max(0, gift.target - total(gift));
     const price = gift => gift.target !== null ? money(gift.target) : gift.id === 'pokemon' ? c.infinite : c.any;
     const progress = gift => gift.target !== null
-      ? `<div class="gift-progress" role="progressbar" aria-label="${escape(c.tags[gifts.indexOf(gift)])}" aria-valuemin="0" aria-valuemax="${gift.target / 100}" aria-valuenow="${Math.min(total(gift), gift.target) / 100}" aria-valuetext="${escape(money(total(gift)) + ' / ' + money(gift.target))}"><span style="width:${Math.min(100, total(gift) / gift.target * 100)}%"></span></div><div class="gift-progress-label"><span>${money(total(gift))} ${c.raised}</span><span>${full(gift) ? '✧' : money(remaining(gift)) + ' ' + c.remaining}</span></div>`
+      ? `<div class="gift-progress" role="progressbar" aria-label="${escape(c.tags[gifts.indexOf(gift)])}" aria-valuemin="0" aria-valuemax="${displayMinor(gift.target) / 100}" aria-valuenow="${displayMinor(Math.min(total(gift), gift.target)) / 100}" aria-valuetext="${escape(money(total(gift)) + ' / ' + money(gift.target))}"><span style="width:${Math.min(100, total(gift) / gift.target * 100)}%"></span></div><div class="gift-progress-label"><span>${money(total(gift))} ${c.raised}</span><span>${full(gift) ? '✧' : money(remaining(gift)) + ' ' + c.remaining}</span></div>`
       : `<div class="gift-open-total">${c.any}</div>`;
     function draw() {
       root.innerHTML = gifts.map((gift, i) => `<article class="gift-card${full(gift) ? ' is-funded' : ''}${gift.id === 'together' ? ' gift-card-open' : ''}"><button class="gift-card-button" type="button" data-gift="${gift.id}" ${!available || full(gift) ? 'disabled' : ''} aria-label="${escape(c.tags[i] + ' — ' + (full(gift) ? c.covered : c.open))}"><div class="gift-card-photo"><img src="${gift.image}" alt="${escape(c.tags[i])}" loading="lazy"><span class="gift-price">${price(gift)}</span>${full(gift) ? `<span class="gift-funded-badge">✧ ${c.covered}</span>` : ''}</div><div class="gift-card-copy"><div class="gift-card-tag">${c.tags[i]} <span aria-hidden="true">${full(gift) ? '✧' : '↗'}</span></div><h2>${c.titles[i]}</h2><p>${c.descriptions[i]}</p>${available ? progress(gift) : '<span class="gift-progress-placeholder" aria-hidden="true"></span>'}${full(gift) ? `<p class="gift-funded-thanks">${c.coveredThanks}</p>` : ''}</div></button></article>`).join('');
@@ -203,7 +235,7 @@ window.WeddingGifts = (() => {
       draftId = crypto.randomUUID();
       pendingPayload = null;
       dialog.setAttribute('aria-labelledby', 'gift-dialog-title');
-      dialog.innerHTML = `<button class="gift-close" type="button" aria-label="${c.close}">×</button><div class="gift-dialog-top"><div class="gift-dialog-image"><img src="${gift.image}" alt="${escape(c.tags[i])}"><span class="gift-dialog-image-label">${c.tags[i]}</span></div><div class="gift-dialog-details"><p class="eyebrow">${c.tags[i]} · ${price(gift)}</p><h2 id="gift-dialog-title">${c.titles[i]}</h2><p>${c.descriptions[i]}</p><div class="gift-dialog-progress">${progress(gift)}</div><div class="gift-payment-area" hidden><h3>${c.methods}</h3>${paymentMarkup()}<p class="gift-transfer-note">${translate('giftNote')}</p></div><p class="gift-checking" role="status">${c.connection}</p><div class="gift-record"><button class="gift-record-toggle" type="button" aria-expanded="false" aria-controls="gift-contribution-form">${c.record} <span aria-hidden="true">＋</span></button><form id="gift-contribution-form" class="gift-contribution-form" hidden><p>${c.recordIntro}</p>${gift.target !== null ? `<fieldset class="gift-coverage"><legend class="visually-hidden">${c.amount}</legend><label><input type="radio" name="coverage" value="partial" checked> ${c.part}</label><label><input type="radio" name="coverage" value="full"> ${c.full}</label></fieldset>` : ''}<div class="gift-form-row"><label>${c.amount}<input type="number" name="amount" min="0.01" step="0.01" inputmode="decimal" required ${gift.target !== null ? 'max="' + remaining(gift) / 100 + '"' : ''}></label><label>${c.name} <span>(${c.nameHint})</span><input type="text" name="name" maxlength="100" autocomplete="name"></label></div><p class="gift-field-hint">${c.amountHint}</p><label>${c.message} <span>(${c.nameHint})</span><textarea name="message" rows="3" maxlength="1000"></textarea></label><p class="gift-field-hint">${c.private}</p><label class="gift-transfer-confirm"><input type="checkbox" name="transferred" required> ${c.confirm}</label><div class="gift-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><p class="gift-form-error" role="alert" hidden></p><button class="gift-submit" type="submit">${c.save}</button></form></div></div></div>`;
+      dialog.innerHTML = `<button class="gift-close" type="button" aria-label="${c.close}">×</button><div class="gift-dialog-top"><div class="gift-dialog-image"><img src="${gift.image}" alt="${escape(c.tags[i])}"><span class="gift-dialog-image-label">${c.tags[i]}</span></div><div class="gift-dialog-details"><p class="eyebrow" data-gift-dialog-price>${c.tags[i]} · ${price(gift)}</p><h2 id="gift-dialog-title">${c.titles[i]}</h2><p>${c.descriptions[i]}</p><div class="gift-dialog-progress">${progress(gift)}</div>${currencyControls(language)}<div class="gift-payment-area" hidden><h3>${c.methods}</h3>${paymentMarkup()}<p class="gift-transfer-note">${translate('giftNote')}</p></div><p class="gift-checking" role="status">${c.connection}</p><div class="gift-record"><button class="gift-record-toggle" type="button" aria-expanded="false" aria-controls="gift-contribution-form">${c.record} <span aria-hidden="true">＋</span></button><form id="gift-contribution-form" class="gift-contribution-form" hidden><p>${c.recordIntro}</p>${gift.target !== null ? `<fieldset class="gift-coverage"><legend class="visually-hidden">${c.amount}</legend><label><input type="radio" name="coverage" value="partial" checked> ${c.part}</label><label><input type="radio" name="coverage" value="full"> ${c.full}</label></fieldset>` : ''}<div class="gift-form-row"><label><span data-gift-amount-label>${c.amount} (${currency})</span><input type="number" name="amount" min="0.01" step="0.01" inputmode="decimal" required ${gift.target !== null ? 'max="' + inputAmount(remaining(gift)) + '"' : ''}></label><label>${c.name} <span>(${c.nameHint})</span><input type="text" name="name" maxlength="100" autocomplete="name"></label></div><p class="gift-field-hint">${c.amountHint}</p><label>${c.message} <span>(${c.nameHint})</span><textarea name="message" rows="3" maxlength="1000"></textarea></label><p class="gift-field-hint">${c.private}</p><label class="gift-transfer-confirm"><input type="checkbox" name="transferred" required> ${c.confirm}</label><div class="gift-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div><p class="gift-form-error" role="alert" hidden></p><button class="gift-submit" type="submit">${c.save}</button></form></div></div></div>`;
       const image = dialog.querySelector('.gift-dialog-image');
       const sourceImage = button.querySelector('img');
       const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -256,7 +288,7 @@ window.WeddingGifts = (() => {
         const input = dialog.querySelector('[name="amount"]');
         const isFull = event.target.value === 'full';
         input.readOnly = isFull;
-        input.value = isFull ? (remaining(active) / 100).toFixed(2) : '';
+        input.value = isFull ? inputAmount(remaining(active)) : '';
       }
     }, { signal });
     dialog.addEventListener('submit', async event => {
@@ -265,7 +297,7 @@ window.WeddingGifts = (() => {
       const gift = active, form = event.target;
       const fields = new FormData(form);
       const errorNode = form.querySelector('.gift-form-error');
-      const cents = Math.round(Number(fields.get('amount')) * 100);
+      const cents = contributionCents(fields.get('amount'), currency, gift.target === null ? null : remaining(gift));
       errorNode.hidden = true;
       if (!Number.isSafeInteger(cents) || cents <= 0 || (gift.target !== null && cents > remaining(gift))) {
         errorNode.textContent = c.invalid; errorNode.hidden = false; return;
@@ -284,7 +316,7 @@ window.WeddingGifts = (() => {
             pendingPayload = null;
             await refresh();
             const amount = form.querySelector('[name="amount"]');
-            if (amount) { amount.max = remaining(gift) / 100; amount.readOnly = false; }
+            if (amount) { amount.max = inputAmount(remaining(gift)); amount.readOnly = false; }
             form.querySelector('[value="partial"]')?.click();
             throw new Error(c.conflict);
           }
@@ -302,6 +334,30 @@ window.WeddingGifts = (() => {
         submitting = false;
         if (submit.isConnected) { submit.disabled = false; submit.textContent = c.save; }
         if (dialog.isConnected) dialog.querySelector('.gift-close').disabled = false;
+        updateActiveProgress();
+      }
+    }, { signal });
+    // Update amounts without replacing the open form or its private draft.
+    document.addEventListener('change', event => {
+      if (!event.target.matches('[data-gift-currency]')) return;
+      if (submitting || !Object.hasOwn(rates, event.target.value)) {
+        event.target.value = currency;
+        return;
+      }
+      const oldCurrency = currency;
+      const input = dialog.querySelector('[name="amount"]');
+      const previousAmount = input && input.value !== '' ? euroCents(input.value, oldCurrency) : null;
+      currency = event.target.value;
+      document.querySelectorAll('[data-gift-currency]').forEach(select => { select.value = currency; });
+      draw();
+      if (active && dialog.open) {
+        dialog.querySelector('[data-gift-dialog-price]').textContent = c.tags[gifts.indexOf(active)] + ' · ' + price(active);
+        dialog.querySelector('[data-gift-amount-label]')?.replaceChildren(c.amount + ' (' + currency + ')');
+        if (input) {
+          if (active.target !== null) input.max = inputAmount(remaining(active));
+          if (input.readOnly) input.value = inputAmount(remaining(active));
+          else if (previousAmount !== null) input.value = inputAmount(previousAmount);
+        }
         updateActiveProgress();
       }
     }, { signal });

@@ -36,8 +36,8 @@ Without these bindings, the API returns 503 and the page shows a retry message. 
 
 ### Gifts and messages
 
-- Targets: Hotel €2,000; JR Pass €800; Flights €1,200; Restaurants €200; Onsen €100. Pokémon and the general gift have no target or maximum.
-- Amounts are stored as integer euro cents. PayNow guests are asked for the approximate euro equivalent.
+- Targets: Hotel €2,000; JR Pass €800; Flights €1,200; Sushi experience €200; Onsen €100. Pokémon and the general gift have no target or maximum.
+- Amounts are stored as integer euro cents. Guests see and enter EUR, SGD or INR, with language defaults FR → EUR, EN → SGD and MR → INR and a manual currency selector on the gallery and gift dialogs. Fixed estimates are €1 = S$1.44 = ₹107 (rounded from ECB reference rates on 14 October 2026); the page labels these as estimates. Contributions are converted back to euro cents before submission, preserving existing shared totals and capacity checks.
 - Transfers happen externally using the existing bank details and PayNow QR. Contributions are **self-reported**, not bank-confirmed. Do not interpret a completed card as proof of cleared funds.
 - A finite gift closes when the recorded total reaches its target. An atomic capacity check prevents simultaneous submissions from exceeding that target; repeated request IDs prevent retry duplication.
 - The public GET endpoint returns only item IDs, targets and totals. Names and notes remain in D1 and are never returned to visitors.
