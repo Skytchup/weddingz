@@ -51,3 +51,22 @@ Review the gift copy and Marathi translations with family. Gift photographs are 
 
 ## Files
 Plain HTML, CSS and vanilla JavaScript, with Cloudflare Pages Functions and D1 for shared gift records. No frontend build tools. Fonts and photographs are externally hosted.
+
+## Separate Marathi invitation (29 January only)
+
+The original root pages remain the full two-day invitation. A second Cloudflare Pages project can deploy a Marathi-only edition from this same repository:
+
+- Production branch: `main`
+- Framework preset: None
+- Build command: `node scripts/build-marathi.mjs`
+- Build output directory: `marathi-dist`
+- Root directory: repository root (leave unchanged)
+- Suggested project name: `rujuta-alexandre-marathi` (the final public URL is assigned by Cloudflare).
+
+The build copies the current design, venue and gift payment methods. It emits only Marathi content, a homepage with Venue/Programme/Gifts, and the four events on 29 January. There is no language selector, Menu page, 28 January programme, or link to the full invitation. Missing paths show this edition's homepage; menu paths redirect to its root. Search indexing is discouraged. This separates normal navigation; it is not password protection if somebody independently shares the original website's URL.
+
+**Shared gifts:** in the NEW project's Production settings, bind `GIFTS_DB` to the exact existing production D1 database used by the original site. Do not create another database, duplicate contributions, or rerun migrations. Add `GIFTS_RATE_SALT` as a secret (a separate long random value is supported), then redeploy. The existing root `functions/` directory supplies the same API to each site's own origin. Both sites query the same records, with identical gift IDs, target amounts, atomic limits and private-message protections; no CORS relaxation or link to the other website is required.
+
+Until the binding and secret are configured, gift recording is disabled with an unavailable message. Keep preview environments unbound or use a separate test database; only the two intentional production sites should share live data. Later pushes to main update both Git-connected projects using their own build settings.
+
+Run `node --test tests/marathi-site.test.mjs tests/gifts.test.mjs tests/menu.test.mjs tests/gift-currency.test.mjs` to check both editions and the shared-database behavior. Generated `marathi-dist/` is ignored by Git.

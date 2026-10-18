@@ -92,3 +92,20 @@ test('storage failures return a clear error rather than fake zero totals or succ
   const { env } = fixture(); delete env.GIFTS_RATE_SALT;
   assert.equal((await onRequestPost({ request: request(body()), env })).status, 503);
 });
+
+test('two separate site origins share totals and gift capacity through one database', async () => {
+  const { env } = fixture();
+  const marathiEnv = { ...env, GIFTS_RATE_SALT: 'separate-site-test-only' };
+  const forSite = (origin, amountCents) => new Request(origin + '/api/gifts/contributions', {
+    method: 'POST', headers: { Origin: origin, 'Content-Type': 'application/json' },
+    body: JSON.stringify(body({amountCents}))
+  });
+  assert.equal((await onRequestPost({request:forSite('https://full.example',2500),env})).status,201);
+  const marathiView = await (await onRequestGet({env:marathiEnv})).json();
+  assert.equal(marathiView.gifts.find(x=>x.id==='onsen').contributedCents,2500);
+  assert.equal((await onRequestPost({request:forSite('https://marathi.example',7500),env:marathiEnv})).status,201);
+  const fullView = await (await onRequestGet({env})).json();
+  assert.equal(fullView.gifts.find(x=>x.id==='onsen').contributedCents,10000);
+  assert.equal((await onRequestPost({request:forSite('https://full.example',1),env})).status,409);
+  assert.equal((await onRequestPost({request:forSite('https://marathi.example',1),env:marathiEnv})).status,409);
+});
