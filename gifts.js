@@ -11,7 +11,7 @@ window.WeddingGifts = (() => {
   };
   const gifts = [
     { id: 'flights', target: 120000, image: photos.flights },
-    { id: 'hotel', target: 200000, image: photos.hotel },
+    { id: 'hotel', target: 300000, image: photos.hotel },
     { id: 'rail', target: 80000, image: photos.rail },
     { id: 'restaurants', target: 20000, image: photos.restaurants },
     { id: 'onsen', target: 10000, image: photos.onsen },
