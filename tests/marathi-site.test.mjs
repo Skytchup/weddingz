@@ -25,11 +25,13 @@ test('separate invitation is Marathi-only with exactly three homepage categories
   assert(html.includes('२९ जानेवारी २०२७'));
   assert(!html.includes('२८'));
 });
-test('programme shows only all four 29 January events and no day-one information',()=>{
+test('programme shows only the three 29 January events at Marigold and no day-one information',()=>{
   const {html}=render('programme');
-  assert.deepEqual([...html.matchAll(/<time>(.*?)<\/time>/g)].map(x=>x[1]),['08:00','11:30','13:00','14:30']);
-  for(const forbidden of ['२८','28 January','haldi','mehendi','sangeet','10:30','16:30','19:00']) assert(!html.toLowerCase().includes(forbidden));
+  assert.deepEqual([...html.matchAll(/<time>(.*?)<\/time>/g)].map(x=>x[1]),['08:00','12:00','13:00']);
+  for(const forbidden of ['२८','28 January','haldi','mehendi','sangeet','11:00','11:30','14:30','16:30','19:00','जेवण / पंगत']) assert(!html.toLowerCase().includes(forbidden));
   assert.equal((html.match(/class="schedule-day"/g)||[]).length,1);
+  assert.equal((html.match(/class="event-venue"/g)||[]).length,3);
+  assert.equal((html.match(/मॅरिगोल्ड बँक्वेट्स अँड कन्व्हेन्शन्स/g)||[]).length,3);
   assert(!source.includes('"day1"'));
 });
 test('venue and gift pages remain Marathi; payment details and same-origin API stay available',()=>{

@@ -34,7 +34,7 @@ app = app.slice(0, headerStart) + 'function header(){return \'<header class="sit
 replaceOnce('28 — 29 · 01 · 2027', '२९ · ०१ · २०२७');
 replaceOnce('Marigold website ↗', 'Marigold संकेतस्थळ ↗');
 replaceOnce('["venue","programme","menu","gifts"].filter(k=>lang!=="mr"||k!=="menu")', '["venue","programme","gifts"]');
-replaceOnce('\'<div class="schedule-day"><h2>\'+t("day1")+\'</h2>\'+events([["10:30","haldi","haldiDesc"],["16:30–19:00","mehendi","mehendiDesc"],["19:00 →","sangeet","sangeetDesc"]])+\'</div><div class="schedule-day"><h2>\'', '\'<div class="schedule-day"><h2>\'');
+replaceOnce('\'<div class="schedule-day"><h2>\'+t("day1")+\'</h2>\'+events([["11:00–14:00","haldi","haldiDesc","windmill"],["16:30–19:00","mehendi","mehendiDesc","marigold"],["19:00 →","sangeet","sangeetDesc","marigold"]])+\'</div><div class="schedule-day"><h2>\'', '\'<div class="schedule-day"><h2>\'');
 const menuStart = app.indexOf('if(page==="menu")body='), menuEnd = app.indexOf('if(page==="gifts")body=', menuStart);
 if (menuStart < 0 || menuEnd < 0) throw new Error('Missing menu content boundary');
 app = app.slice(0, menuStart) + app.slice(menuEnd);
